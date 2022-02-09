@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int max(int A[], int n)
+{
+        int i;
+        int mx = A[0];
+        for (i=1; i < n; i++)
+        if(mx < A[i])
+        mx = A[i];
+        return mx;
+}
+
+int main()
+{
+        int too[100], n, i, m;
+        scanf("%d", &n);
+        for (i = 0; i < n; i++)
+        scanf("%d", &too[i]);
+
+        m = max(too, n);
+        printf("%d\n", m);
+        return 0;
+}
